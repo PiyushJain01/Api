@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+:root{
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+}
+body{
+    background: var(--Dark-Blue);
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .id{
+    color: var(--Neon-Green);
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 1rem;
+}
+.box .advice{
+    color:var(--Light-Cyan);
+    text-align: center;
+    font-size: 28px;
+    margin: 10px 0px;
+    font-weight: 800;
+
+}
+.line2{
+    display: none;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 15px;
+    width:400px;
+    padding: 1.5rem;
+    background: var(--Dark-Grayish-Blue);
+    /* z-index: 1; */
+}
+.box .circle{
+    background: url('images/icon-dice.svg') no-repeat center center ; 
+    position: absolute;
+    cursor: pointer;
+    bottom: -24px;
+    width: 50px;
+    background-color: var(--Neon-Green);
+    height: 50px;
+    border-radius: 2rem;
+    transition: .2s ease-in-out;
+    
+}
+.box .circle:hover{
+    box-shadow: 1px 1px 10px 4px var(--Neon-Green);
+
+}
+
+.box .line{
+    max-width: 100%;
+    /* padding:10px 0px; */
+    margin: 1rem 0px; 
+    /* width: 60px; */
+}
+@media  screen and (min-width:650px) {
+    .box{
+        width: 500px;
+    }
+    .line{
+        display: none;
+    }
+    .line2{
+        display: block;
+        margin: 1rem 0px; 
+    }
+}
